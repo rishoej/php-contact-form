@@ -11,41 +11,42 @@
 	    <br>
 		<div class="col-md-4">
             <?php
-				if(!empty($_POST["antiSpam"])) {
-					die;  
-				}
+            	// only bots will type something in this input
+		if(!empty($_POST["antiSpam"])) {
+			die;  
+		}
             	else if(isset($_POST['submit'])) {	
-            	    if(isset($_POST['title'],$_POST['email'],$_POST['message'])) {
-                        echo "
-                        <ol class='breadcrumb'>
-                            <li class='active'>
-                            <i class='fa fa-dashboard'></i>" .
-                    			"You message was sent" . "
-                            </li>
-                        </ol>";
-                        
-                        //email receiver
-    					$email = "tobias_rishoej@hotmail.com"; 
-    
-                        //email title
-    					$title = $_POST['title'];
-    
-                        //email message
-    					$message = $_POST['message'];
-    					
-    					//header information
-        				$header  = "MIME-Version: 1.0" . "\r\n";
-        				$header .= "Content-type: text/html; charset=iso-8859-1" . "\r\n";
-        				
-        				//email from
-        				$header .= "from:" . $_POST['email'];
-        
-        				mail($email, $title, $message, $header); 	
-        			}
-        			else if(!isset($_POST['title'],$_POST['email'],$_POST['message'])) {
-        			    echo "Please insert a title, your email and a message";   
-        			}
-		        }
+            	    	if(isset($_POST['title'],$_POST['email'],$_POST['message'])) {
+	                        echo "
+	                        <ol class='breadcrumb'>
+	                            <li class='active'>
+	                            <i class='fa fa-dashboard'></i>" .
+	                    			"You message was sent" . "
+	                            </li>
+	                        </ol>";
+	                        
+	                        //email receiver
+	    			$email = "your@email.com"; 
+	    
+	                        //email title
+	    			$title = $_POST['title'];
+	    
+	                        //email message
+	    			$message = $_POST['message'];
+	    					
+	    			//header information
+	        		$header  = "MIME-Version: 1.0" . "\r\n";
+	        		$header .= "Content-type: text/html; charset=iso-8859-1" . "\r\n";
+	        				
+	        		//email from
+	        		$header .= "from:" . $_POST['email'];
+	        
+	        		mail($email, $title, $message, $header); 	
+	        		} else if(!isset($_POST['title'],$_POST['email'],$_POST['message'])) {
+	        			echo "Please insert a title, your email and a message";   
+	        		}
+		 	}
+		 }
             ?>
 		<h3>PHP contact form</h3>
 		<hr>
