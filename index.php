@@ -74,6 +74,7 @@
  		</form>
 	</div>
     <script>
+    //This function will remove the input field antiSpam when it loads
     (function () {
         var e = document.getElementById("antiSpamDiv");
         e.parentNode.removeChild(e);
