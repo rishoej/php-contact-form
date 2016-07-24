@@ -45,7 +45,6 @@
 	        		} else if(!isset($_POST['title'],$_POST['email'],$_POST['message'])) {
 	        			echo "Please insert a title, your email and a message";   
 	        		}
-		 	}
 		}
             	?>
 		<h3>PHP contact form</h3>
