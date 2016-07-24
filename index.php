@@ -10,7 +10,7 @@
 	<div class="container">
 	    <br>
 		<div class="col-md-4">
-            <?php
+            	<?php
             	// only bots will type something in this input
 		if(!empty($_POST["antiSpam"])) {
 			die;  
@@ -46,8 +46,8 @@
 	        			echo "Please insert a title, your email and a message";   
 	        		}
 		 	}
-		 }
-            ?>
+		}
+            	?>
 		<h3>PHP contact form</h3>
 		<hr>
 		<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
